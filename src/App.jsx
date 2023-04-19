@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const User = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
-    if (!User) navigate('/login');
+    if (!User) navigate('/');
   }, []);
 
   
@@ -20,10 +20,8 @@ const App = () => {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="login" element={<Login/>}/>
-      <Route path="*" element={<Home/>} />
-      <Route path='welcome' element={<Welcome/>} />
-      
+      <Route path="*" element={<Login/>}/>
+      <Route path="home" element={<Home/>} />
     </Routes>
     </BrowserRouter>
     
