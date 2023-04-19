@@ -24,7 +24,7 @@ const Navbar = ({ searchTerm, setSearchTerm}) => {
            to={`user-profile/${userInfo?.uid}`}
            className='hidden md:block'
           >
-            <img src={userInfo.photoURL} alt="user"  className='w-12 h-9 rounded-full'/>
+            <img src={userInfo?.photoURL} alt="user"  className='w-12 h-9 rounded-full'/>
           </Link>
           <Link
            to='create-pin'
