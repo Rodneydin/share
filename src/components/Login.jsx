@@ -36,7 +36,7 @@ import { client } from '../client'
 
       client.createIfNotExists(doc)
        .then(() => {
-        navigate('/',{ replace: true })
+        navigate('home',{ replace: true })
        }) 
        console.log(user)
       
