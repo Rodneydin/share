@@ -67,7 +67,7 @@ import UserProfile from '../components/UserProfile'
               <img src={logo} alt="logo" className='w-28 ' />
             </Link>
             <Link to={`user-profile/${user?._id}`}>
-              <img src={userInfo.photoURL} alt="logo" className='w-10 rounded-full ' />
+              <img src={userInfo?.photoURL} alt="logo" className='w-10 rounded-full ' />
             </Link>
             </div>
             {toggleSidebar && (
@@ -84,7 +84,7 @@ import UserProfile from '../components/UserProfile'
         <div className='pb-2 flex-1 h-screen overflow-y-scroll' ref={scrollRef}>
           <Routes>
             <Route path='/user-profile/:userId' element={<UserProfile user={user && user}/>} />
-            <Route path='/*' element={<Pins user={user && user}/>} />
+            <Route path='home' element={<Pins user={user && user}/>} />
              
           </Routes>
         </div>
